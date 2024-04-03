@@ -1,6 +1,8 @@
+## Name:Saravanan G
+## Reg no:212223230194
 # BOOLEAN_FUNCTION_MINIMIZATION
 
-**AIM:**
+## AIM:
 
 To implement the given logic function verify its operation in Quartus using Verilog programming.
 
@@ -31,35 +33,49 @@ Hardware – PCs, Cyclone II , USB flasher
 5.	For different input combinations generate the timing diagram.
 
 
-**Program:**
+## Program:
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+```
+module Boolean_min(a,b,c,d,w,x,y,z,f1,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+wire adash,bdash,cdash,ddash,ydash,p,q,r,s,t,u;
+not(adash,a);
+not(bdash,b);
+not(cdash,c);
+not(ddash,d);
+not(ydash,y);
+and(p,bdash,ddash);
+and(q,adash,b,d);
+and(r,a,b,cdash);
+or(f1,p,q,r);
 
-Developed by:SARAVANAN G
-RegisterNumber:
-![Screenshot 2024-03-19 133800](https://github.com/Saravanan2512/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979117/7f0fc6e4-fbb9-497e-b39b-423ebcab31b8)
-*/
+and g1(s,ydash,z);
+and g2(t,x,y);
+and g3(u,w,z);
+or g4(f2,s,t,u);
+endmodule
+```
+Developed by:Prideesh M RegisterNumber:212223040154
 
 
-**RTL realization**
+## RTL realization
 
-![Screenshot 2024-03-19 134224](https://github.com/Saravanan2512/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979117/8ef8ed1a-0493-45d3-be57-938f918625d6)
-
-
-
-**Truth table**
-
-![Screenshot 2024-03-19 134237](https://github.com/Saravanan2512/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979117/d596fc06-5110-4984-bcf7-5c02b512b0e8)
+![Screenshot 2024-03-23 200335](https://github.com/prideeshm/BOOLEAN_FUNCTION_MINIMIZATION/assets/144870483/f352081d-c087-4f9e-bfbc-1f9953f905cf)
 
 
 
+## truth table
 
-**Timing Diagram**
-
-![Screenshot 2024-03-19 134248](https://github.com/Saravanan2512/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979117/6a6f9ed8-7f87-4a2d-82e7-45da90f75b06)
+![ex02 truth table](https://github.com/prideeshm/BOOLEAN_FUNCTION_MINIMIZATION/assets/144870483/9b8ac838-42f6-4e16-af60-36b3d664d4db)
 
 
-**Result:**
+
+## Timing Diagram
+![Screenshot 2024-03-23 200808](https://github.com/prideeshm/BOOLEAN_FUNCTION_MINIMIZATION/assets/144870483/b497fc93-c6c6-4981-8462-91a226b19e88)
+
+## Result:
 
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
 
